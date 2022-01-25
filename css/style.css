@@ -317,3 +317,40 @@ img {
   z-index: 3;
   background: transparent;
 }
+
+/* tours ------------------------ */
+
+.tours {
+  margin-bottom: 139px;
+}
+
+.tour {
+  display: flex;
+  justify-content: space-between;
+  gap: 60px;
+  margin-bottom: 77px;
+}
+
+.tour__pic {
+  flex-basis: 597px;
+}
+
+.tour__info {
+  flex-basis: 605px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 25px 43px;
+}
+
+.tour__title {
+  max-width: 380px;
+  font-size: 3rem;
+  line-height: 4rem;
+}
+
+.tour__desc {
+  max-width: 519px;
+}
