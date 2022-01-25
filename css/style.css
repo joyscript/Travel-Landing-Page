@@ -4,16 +4,18 @@ html {
 }
 
 *,
-*::after,
-*::before {
+*::before,
+*::after {
   box-sizing: inherit;
+  margin: 0;
+  padding: 0;
 }
 
 body {
   font-family: 'Lato', Verdana, sans-serif;
   font-style: normal;
   font-size: 1.6rem;
-  line-height: 1.2;
+  line-height: 2.4rem;
   font-weight: normal;
   color: #102746;
 }
@@ -77,7 +79,70 @@ body {
 /* intro ----------------------------------------- */
 
 .intro {
-  height: 100vh;
-  background: url('../img/intro-bg.jpg') no-repeat;
+  min-height: 100vh;
+  padding-top: 263px;
+  background: url('../img/intro-bg.jpg') no-repeat center;
   background-size: cover;
+  color: #fff;
+}
+
+.intro__title {
+  max-width: 619px;
+  margin: 0;
+  margin-bottom: 22px;
+  font-weight: 400;
+  font-size: 5rem;
+  line-height: 6rem;
+}
+
+.intro__subtitle {
+  max-width: 546px;
+  margin-bottom: 57px;
+}
+
+.search-form {
+  display: flex;
+  align-items: center;
+}
+
+.search-form__input {
+  width: 300px;
+  margin-right: 60px;
+  padding-bottom: 22px;
+  padding-left: 43px;
+  color: #fff;
+  font-size: 1.8rem;
+  background: transparent url('../img/svg/circle-icon.svg') no-repeat left top;
+  background-size: 20px;
+  border: none;
+  border-bottom: 2px solid #bfc0c5;
+  outline: none;
+}
+
+.search-form__input::placeholder {
+  color: #fff;
+  font-size: 1.8rem;
+  transition: 0.25s;
+}
+
+.search-form__input:focus::placeholder {
+  opacity: 0;
+}
+
+.search-form__submit {
+  padding: 15px 39px;
+  font-size: 2.4rem;
+  color: #fff;
+  text-transform: uppercase;
+  background: #1b7dff;
+  border: none;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.search-form__submit:hover,
+.search-form__submit:focus,
+.search-form__submit:active {
+  background: #185fbd;
+  outline: none;
 }
