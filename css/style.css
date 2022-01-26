@@ -16,14 +16,24 @@ body {
   font-style: normal;
   font-size: 1.6rem;
   line-height: 2.4rem;
-  font-weight: normal;
+  font-weight: 400;
   color: #102746;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 400;
 }
 
 img {
   width: 100%;
   height: auto;
   display: block;
+}
+
+a {
+  text-decoration: none;
 }
 
 .wrapper {
@@ -41,7 +51,6 @@ img {
   padding-bottom: 10px;
   font-size: 3.5rem;
   line-height: 4.2rem;
-  font-weight: 400;
 }
 
 .section-title::after {
@@ -58,7 +67,6 @@ img {
   padding-right: 59px;
   color: #006dfe;
   text-transform: uppercase;
-  text-decoration: none;
   background: url('../img/svg/arrow-icon.svg') no-repeat right center;
   transition: opacity 0.3s;
 }
@@ -104,7 +112,6 @@ img {
   font-size: 1.8rem;
   line-height: 2.4rem;
   color: #fff;
-  text-decoration: none;
   cursor: pointer;
   transition: 0.5s;
 }
@@ -136,7 +143,6 @@ img {
   max-width: 619px;
   margin: 0;
   margin-bottom: 22px;
-  font-weight: 400;
   font-size: 5rem;
   line-height: 6rem;
 }
@@ -212,7 +218,6 @@ img {
   margin-bottom: 120px;
   font-size: 3.5rem;
   line-height: 4.2rem;
-  font-weight: 400;
 }
 
 .benefits__cards {
@@ -353,4 +358,79 @@ img {
 
 .tour__desc {
   max-width: 519px;
+}
+
+/* top ------------------------------- */
+
+.top {
+  margin-bottom: 144px;
+}
+
+.top__title {
+  margin-bottom: 54px;
+}
+
+.top__cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 58px 52px;
+}
+
+.top__card {
+  grid-column: span 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.top__card-pic {
+  position: relative;
+  margin-bottom: 45px;
+}
+
+.top__card-stats {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  width: 100%;
+  padding: 15px 25px;
+  color: #fff;
+  background-color: rgba(21, 24, 36, 0.6);
+}
+
+.top__card-title {
+  font-size: 1.8rem;
+  margin-right: auto;
+}
+
+.top__card-likes {
+  margin-right: 14px;
+  padding-right: 20px;
+  background: url('../img/svg/heart-icon.svg') no-repeat right;
+}
+
+.top__card-comments {
+  padding-right: 23px;
+  background: url('../img/svg/comments-icon.svg') no-repeat right;
+}
+
+.top__card-desc {
+  margin-bottom: 31px;
+}
+
+.top__card-link {
+  display: inline-block;
+  margin-top: auto;
+  padding: 11px 19px;
+  text-transform: uppercase;
+  color: #fff;
+  background: #006dfe;
+  transition: 0.3s;
+}
+
+.top__card-link:hover,
+.top__card-link:focus,
+.top__card-link:active {
+  background: #185fbd;
 }
