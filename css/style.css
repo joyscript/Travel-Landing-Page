@@ -27,9 +27,9 @@ h3 {
 }
 
 img {
+  display: block;
   width: 100%;
   height: auto;
-  display: block;
 }
 
 a {
@@ -42,13 +42,13 @@ ul {
 }
 
 .wrapper {
-  max-width: 1060px;
+  max-width: 1090px;
   margin: 0 auto;
+  padding: 0 15px;
 }
 
 .wrapper-lg {
-  max-width: 1262px;
-  margin: 0 auto;
+  max-width: 1292px;
 }
 
 .section-title {
@@ -108,7 +108,7 @@ ul {
   align-items: center;
 }
 
-.header__menu-list {
+.header__menu {
   display: flex;
 }
 
@@ -145,11 +145,64 @@ ul {
   opacity: 0.75;
 }
 
+.burger {
+  position: relative;
+  display: none;
+  width: 40px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.burger__line {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 3px;
+  background: #fff;
+}
+
+.burger__line_second {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.burger__line_third {
+  top: calc(100% - 3px);
+}
+
+.close {
+  position: relative;
+  display: none;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
+
+.close__line {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 3px;
+  background: #fff;
+}
+
+.close__line_first {
+  transform: rotate(45deg);
+}
+
+.close__line_second {
+  transform: rotate(-45deg);
+}
+
 /* intro ----------------------------------------- */
 
 .intro {
-  min-height: 962px;
-  padding: 263px 0;
+  min-height: 100vh;
+  padding: 263px 0 280px;
   background: url('../img/intro-bg.jpg') no-repeat center;
   background-size: cover;
   color: #fff;
@@ -170,12 +223,13 @@ ul {
 
 .search-form {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
+  gap: 60px;
 }
 
 .search-form__input {
   width: 300px;
-  margin-right: 60px;
   padding-bottom: 22px;
   padding-left: 43px;
   color: #fff;
@@ -239,11 +293,14 @@ ul {
 .benefits__cards {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-column-gap: 55px;
+  gap: 55px;
 }
 
 .benefits__card {
   grid-column: span 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 .benefits__card-pic {
@@ -260,6 +317,10 @@ ul {
   margin-bottom: 39px;
 }
 
+.benefits__card .arrow-link {
+  margin-top: auto;
+}
+
 /* places ---------------------------------- */
 
 .places {
@@ -274,13 +335,13 @@ ul {
 }
 
 .places__title {
-  margin-right: 20px;
+  margin-right: 30px;
 }
 
 .places__cards {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
-  grid-gap: 10px;
+  gap: 10px;
 }
 
 .places__card {
@@ -316,6 +377,7 @@ ul {
 .places__card-img {
   height: 100%;
   object-fit: cover;
+  object-position: center bottom;
   transition: 0.3s;
 }
 
@@ -388,12 +450,12 @@ ul {
 
 .top__cards {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 58px 52px;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 58px 52px;
 }
 
 .top__card {
-  grid-column: span 1;
+  grid-column: span 2;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -489,7 +551,7 @@ ul {
   height: 64px;
 }
 
-.footer__menu {
+.footer__nav {
   flex-basis: 50%;
   display: flex;
   justify-content: space-between;
