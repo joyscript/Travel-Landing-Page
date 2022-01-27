@@ -24,5 +24,33 @@ const showMenu = () => {
   });
 };
 
+const smoothScroll = () => {
+  const menulinks = document.querySelectorAll('.header__menu-link');
+  const logoLinks = document.querySelectorAll('.logo__link');
+  const headerHeight = document.querySelector('.header').clientHeight;
+
+  const links = [...menulinks, ...logoLinks];
+
+  links.forEach((link) => {
+    link.addEventListener('click', (e) => {
+      e.preventDefault();
+
+      const id = link.getAttribute('href').slice(1);
+      const target = document.getElementById(id);
+      const targetPosition = target.getBoundingClientRect().top;
+      const offsetPosition = targetPosition + window.pageYOffset - headerHeight;
+
+      console.log(targetPosition);
+      console.log(window.pageYOffset);
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth',
+      });
+    });
+  });
+};
+
 scrollHeader();
 showMenu();
+smoothScroll();

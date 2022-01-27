@@ -90,14 +90,12 @@ ul {
   left: 0;
   z-index: 100;
   width: 100%;
-  padding-top: 56px;
+  padding: 15px 0;
   background: transparent;
   transition: 0.3s linear;
 }
 
 .header.active {
-  padding-top: 10px;
-  padding-bottom: 10px;
   background: #0e1d28;
   box-shadow: 0px 2px 5px rgba(21, 24, 36, 0.2);
 }
@@ -324,7 +322,7 @@ ul {
 /* places ---------------------------------- */
 
 .places {
-  margin-bottom: 131px;
+  margin-bottom: 100px;
 }
 
 .places__caption {
@@ -404,7 +402,8 @@ ul {
 /* tours ------------------------ */
 
 .tours {
-  margin-bottom: 139px;
+  padding-top: 30px;
+  margin-bottom: 110px;
 }
 
 .tour {
@@ -441,6 +440,7 @@ ul {
 /* top ------------------------------- */
 
 .top {
+  padding-top: 30px;
   margin-bottom: 144px;
 }
 

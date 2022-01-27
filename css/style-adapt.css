@@ -6,6 +6,10 @@
 }
 
 @media (max-width: 1090px) {
+  .header {
+    padding: 10px 0;
+  }
+
   .intro {
     min-height: auto;
     padding-top: 200px;
@@ -183,10 +187,6 @@
 @media (max-width: 375px) {
   html {
     font-size: 9px;
-  }
-
-  .header {
-    padding: 10px 0;
   }
 
   .header__nav {
