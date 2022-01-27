@@ -38,10 +38,10 @@ const smoothScroll = () => {
       const id = link.getAttribute('href').slice(1);
       const target = document.getElementById(id);
       const targetPosition = target.getBoundingClientRect().top;
-      const offsetPosition = targetPosition + window.pageYOffset - headerHeight;
+      const offsetPosition = targetPosition + window.scrollY - headerHeight;
 
       console.log(targetPosition);
-      console.log(window.pageYOffset);
+      console.log(window.scrollY);
 
       window.scrollTo({
         top: offsetPosition,
