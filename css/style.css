@@ -180,13 +180,13 @@ ul {
   position: relative;
   display: none;
   width: 40px;
-  height: 40px;
+  height: 30px;
   cursor: pointer;
 }
 
 .close__line {
   position: absolute;
-  top: 50%;
+  top: 42%;
   left: 0;
   display: block;
   width: 100%;
@@ -208,7 +208,7 @@ ul {
   min-height: 100vh;
   margin-bottom: -210px;
   padding: 263px 0 280px;
-  background: url('../img/intro-bg-min.jpg') no-repeat center;
+  background: url('../img/img-orig/intro-bg.jpg') no-repeat center;
   background-size: cover;
   color: #fff;
 }
