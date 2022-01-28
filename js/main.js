@@ -1,21 +1,6 @@
 const header = document.querySelector('.header');
-const menu = document.querySelector('.header__nav');
+const menu = document.querySelector('.header__menu');
 const burger = document.querySelector('.burger');
-const close = document.querySelector('.close');
-
-const handlerMenu = (e) => {
-  if (!e.target.closest('.header')) menu.classList.remove('active');
-};
-
-close.addEventListener('click', () => {
-  menu.classList.remove('active');
-  window.removeEventListener('click', handlerMenu);
-});
-
-burger.addEventListener('click', () => {
-  menu.classList.add('active');
-  window.addEventListener('click', handlerMenu);
-});
 
 window.addEventListener('scroll', () => {
   if (window.scrollY > 50) {
@@ -24,6 +9,26 @@ window.addEventListener('scroll', () => {
     header.classList.remove('active');
   }
 });
+
+const closeMenu = (e) => {
+  if (!e.target.closest('.header__nav')) {
+    menu.classList.remove('active');
+    burger.classList.remove('active');
+  }
+};
+
+const toggleMenu = () => {
+  menu.classList.toggle('active');
+  burger.classList.toggle('active');
+
+  if (menu.classList.contains('active')) {
+    window.addEventListener('click', closeMenu);
+  } else {
+    window.removeEventListener('click', closeMenu);
+  }
+};
+
+burger.addEventListener('click', toggleMenu);
 
 const smoothScroll = () => {
   const menulinks = document.querySelectorAll('.header__menu-link');
@@ -49,7 +54,7 @@ const smoothScroll = () => {
         });
       }
 
-      if (window.innerWidth <= 768) menu.classList.remove('active');
+      if (window.innerWidth <= 768 && !link.classList.contains('logo__link')) toggleMenu();
     });
   });
 };
