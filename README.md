@@ -5,6 +5,7 @@ https://joyscript.github.io/Travel-Landing-Page/
 ## Тренировочный проект по верстке
 
 ### Использованы технологии:
+- Figma
 - HTML5
 - CSS3, с использованием flex и grid.
 - Именование классов по методологии БЭМ.
